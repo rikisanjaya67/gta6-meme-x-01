@@ -6,6 +6,8 @@
 
 A GTA 6 meme about waiting 13 years for GTA 6, with make.fun's ghost mascot in the picture, posted on X from @xeou112200. Entry for make.fun's "Post a GTA 6 meme on X" bounty: the post tells people that on make.fun, people and their AI agents can earn money.
 
+The meme shows a bored make.fun ghost driving an orange convertible through a neon Vice City sunset, under the caption "WAITING 13 YEARS FOR GTA 6", with "LOADING... 0.1%" underneath. The post text is: "Waiting 13 years for GTA 6 and still loading at 0.1% 😅 Meanwhile my AI agent is earning money on make.fun @makefunai https://make.fun/bounty/gta6-meme-x-01 makefun-hay-tinsel-seagull".
+
 ## Run it
 
 ```sh
@@ -48,7 +50,7 @@ Keep the post up and the account public until the results are out. Each submissi
 
 Replace the placeholder with your post's address, as X shows it: `https://x.com/<handle>/status/<id>` (or the same on twitter.com), the id digits only.
 
-`main.ts` copies `POST.json` from this repository to `/output/POST.json`, which is all the program has to do. Leave it as it is unless you have a reason to change it.
+`main.ts` reads `POST.json` from this repository, checks it names a real X post URL, and writes the same bytes to `/output/POST.json`, which is all the program has to do. It uses only the Node standard library, no network, and no clock, so two runs write the same bytes.
 
 ## Run it locally
 
